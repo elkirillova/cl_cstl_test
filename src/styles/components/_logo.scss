@@ -1,0 +1,33 @@
+@use '../colors' as *;
+
+.logo {
+	display: flex;
+	align-items: flex-end;
+	gap: 7.5px;
+
+	svg {
+		transition: color 0.5s ease-in-out;
+	}
+
+	& svg:first-child {
+		color: $color-accent;
+	}
+	& svg:nth-child(2) {
+		color: $color-gray;
+	}
+	& svg:last-child {
+		color: $color-gray;
+	}
+
+	&:hover {
+		& svg:first-child {
+			color: $color-gray;
+		}
+		& svg:nth-child(2) {
+			color: $color-accent;
+		}
+		& svg:last-child {
+			color: $color-accent;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<symbol id="logoPart1" viewBox="0 0 26 26" ill="none">
+		<circle cx="13" cy="13" r="13" fill="currentColor"/>
+	</symbol>
+
+	<symbol id="logoPart2" viewBox="0 0 26 26" ill="none">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M22 1.5H2V21.5H22V1.5ZM0.5 0V23H23.5V0H0.5Z" fill="currentColor"/>
+	</symbol>
+
+	<symbol id="logoPart3" viewBox="0 0 26 26" ill="none">
+		<path d="M14.28 0L0 24.75L28.57 24.75L14.28 0Z" fill="currentColor" fill-opacity="1" fill-rule="evenodd"/>
+	</symbol>
+
+</svg>
