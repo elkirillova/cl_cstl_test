@@ -1,0 +1,9 @@
+//@use 'colors' as *;
+@forward 'typography';
+@forward 'reset';
+@use 'global' as *;
+
+// components
+@forward 'components/header';
+@forward 'components/footer';
+@forward 'components/logo';

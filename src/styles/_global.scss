@@ -1,0 +1,27 @@
+@use 'colors' as *;
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: $color-bg;
+	color: $color-main;
+	font-size: 16px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 16px;
+	border: 1px solid red;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+
+@media only screen and (width >= 768px) {
+  .container {
+	padding: 32px;
+  }
+}
