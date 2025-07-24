@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Icon } from '../ui/Icon/Icon'
+import { Icon } from '@/components'
+import { memo } from 'react'
 
-export const Logo = () => {
+export const Logo = memo(() => {
 	return (
 		<Link className="logo" href={'/'}>
 			<Icon iconId={'logoPart1'} />
@@ -9,4 +10,6 @@ export const Logo = () => {
 			<Icon iconId={'logoPart3'} width={'29px'} height={'25px'} viewBox={'0 0 29 25'} />
 		</Link>
 	)
-}
+})
+
+Logo.displayName = 'Logo'
