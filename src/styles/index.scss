@@ -1,5 +1,6 @@
 @forward 'colors';
 @forward 'typography';
+@forward 'vars';
 @forward 'reset';
 @forward 'global';
 
@@ -7,3 +8,6 @@
 @forward 'components/header';
 @forward 'components/footer';
 @forward 'components/logo';
+@forward 'components/menu';
+@forward 'components/burger';
+@forward 'components/overlay';

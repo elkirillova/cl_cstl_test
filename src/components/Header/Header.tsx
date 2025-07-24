@@ -1,13 +1,87 @@
-import { Logo } from '../Logo/Logo'
+'use client'
+import { useEffect, useRef, useState } from 'react'
+import { BurgerButton } from './BurgerButton/BurgerButton'
+import { Logo } from './Logo/Logo'
+import { Menu } from './Menu/Menu'
+import { Overlay, Portal } from '@/components'
+import { useMediaQuery } from '@/hooks'
+import clsx from 'clsx'
 
 export const Header = () => {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
+
+	const isMobile = useMediaQuery('(max-width: 768px)')
+
+	const sentinelRef = useRef<HTMLDivElement>(null)
+	const [isScrolled, setIsScrolled] = useState(false)
+
+	const menuId = 'menu'
+
+	const handleMenuToggle = () => {
+		setIsMobileMenuOpen(prev => !prev)
+	}
+
+	const handleMenuClose = () => {
+		setIsMobileMenuOpen(false)
+	}
+
+	useEffect(() => {
+		if (isMobile) {
+			document.body.style.overflow = isMobileMenuOpen ? 'hidden' : ''
+		}
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [isMobile, isMobileMenuOpen])
+
+	useEffect(() => {
+		const sentinel = sentinelRef.current
+
+		if (!sentinel) return
+
+		const observer = new IntersectionObserver(([entry]) => setIsScrolled(!entry.isIntersecting), {
+			threshold: 0,
+		})
+
+		observer.observe(sentinel)
+
+		return () => observer.unobserve(sentinel)
+	}, [])
+
 	return (
-		<header className="header">
-			<div className="container">
-				<div className="header__wrapper">
-					<Logo />
+		<>
+			<div ref={sentinelRef} className="header__sentinel" />
+			<header className={clsx('header', isScrolled && 'header--scrolled')}>
+				<div className="container">
+					<div className="header__wrapper">
+						<Logo />
+
+						{!isMobile && <Menu className={'header__nav'} />}
+						{isMobile && (
+							<BurgerButton
+								isOpen={isMobileMenuOpen}
+								onClick={handleMenuToggle}
+								ariaCcontrols={menuId}
+								ariaExpanded={isMobileMenuOpen}
+								ariaLabel={isMobileMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
+							/>
+						)}
+					</div>
 				</div>
-			</div>
-		</header>
+			</header>
+			{isMobile && isMobileMenuOpen && (
+				<Portal>
+					<>
+						<Menu
+							id={menuId}
+							className={isMobileMenuOpen ? 'menu--show ' : ''}
+							onLinkClick={handleMenuClose}
+						/>
+						<Overlay onClick={handleMenuToggle} />
+					</>
+				</Portal>
+			)}
+		</>
 	)
 }

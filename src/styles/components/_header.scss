@@ -1,4 +1,29 @@
+@use '../colors' as *;
+@use '../vars' as *;
+
 .header {
-	position: sticky;
-	background-color: lightblue;
+	background-color: $color-bg;
+	transition: box-shadow 0.3s ease;
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	&--scrolled {
+		box-shadow: $header-shadow;
+	}
+
+	&__sentinel {
+		height: 0;
+		width: 100%;
+		opacity: 0;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }

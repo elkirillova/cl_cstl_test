@@ -1,0 +1,55 @@
+@use '../typography' as *;
+@use '../colors' as *;
+
+.menu {
+	padding: 70px 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 84%;
+	height: 100vh;
+	background-color: $color-bg;
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+
+	@media only screen and (min-width: 768px) {
+		padding: 0;
+		position: static;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		opacity: 1;
+	}
+
+	&--show {
+		opacity: 1;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		column-gap: 64px;
+		row-gap: 16px;
+
+		@media only screen and (min-width: 768px) {
+			flex-direction: row;
+		}
+	}
+
+	&__item a {
+		font-size: $fs-sm;
+		line-height: $lh-snug;
+		color: $color-main;
+		font-weight: 400;
+		transition: color 0.3s ease;
+
+		@media only screen and (min-width: 768px) {
+			font-size: $fs-base;
+
+			&:hover {
+				color: $color-accent;
+			}
+		}
+	}
+}

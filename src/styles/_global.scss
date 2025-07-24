@@ -1,4 +1,13 @@
 @use './colors' as *;
+@use './vars' as *;
+
+html {
+	scroll-behavior: smooth;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
 
 body {
 	display: flex;
@@ -12,16 +21,17 @@ body {
 	margin: 0 auto;
 	max-width: 1440px;
 	padding: 16px;
-	border: 1px solid red;
+
+	@media only screen and (min-width: 768px) {
+		padding: 32px;
+	}
 }
 
 .main {
 	flex-grow: 1;
+	margin-top: $header-height;
 }
 
-
-@media only screen and (width >= 768px) {
-  .container {
-	padding: 32px;
-  }
+.section {
+	scroll-margin-top: $header-height;
 }
