@@ -25,5 +25,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 16px 0 19px;
+
+		@media only screen and (min-width: 768px) {
+			padding: 20px 0 21px;
+		}
 	}
 }
