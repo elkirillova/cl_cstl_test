@@ -1,0 +1,84 @@
+@use '../colors' as *;
+@use '../typography' as *;
+
+.accordion {
+	&__item {
+		padding-bottom: 15.5px;
+		border-bottom: 1px solid $color-gray;
+
+		@media only screen and (min-width: 1440px) {
+			padding-bottom: 13.5px;
+		}
+
+
+		&:not(:first-of-type) {
+			padding-top: 30px;
+
+			@media only screen and (min-width: 768px) {
+				padding-top: 54px;
+			}
+
+			@media only screen and (min-width: 1440px) {
+				padding-top: 40.5px;
+			}
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 24px;
+		width: 100%;
+
+		font-size: $fs-base;
+		line-height: $lh-normal;
+		text-align: left;
+		color: $color-main;
+
+		cursor: pointer;
+
+		&.open {
+			align-items: flex-start;
+		}
+
+		@media only screen and (min-width: 1280px) {
+			font-size: $fs-lg;
+		}
+		
+		svg {
+			color: $color-accent;
+		}
+	}
+
+	&__collapse {
+		height: 0;
+		overflow: hidden;
+		transition: height .5s ease;
+
+		&.open {
+			height: auto;
+		}
+	}
+
+	&__body {
+		padding: 14px 0 9.5px;
+
+		@media only screen and (min-width: 768px) {
+			padding-bottom: 2px;
+		}
+
+		@media only screen and (min-width: 1440px) {
+			padding: 26px 0 16px;
+		}
+	}
+
+	&__icon {
+		transition: transform 0.5s ease;
+		transform: rotate(0deg);
+
+		&.open {
+			transform: rotate(180deg);
+		}
+	}
+}

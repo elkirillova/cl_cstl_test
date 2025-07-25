@@ -11,7 +11,9 @@
 @forward 'components/menu';
 @forward 'components/burger';
 @forward 'components/overlay';
+@forward 'components/accordion';
 
 // sections
 @forward 'components/hero';
 @forward 'components/description';
+@forward 'components/faqs';
