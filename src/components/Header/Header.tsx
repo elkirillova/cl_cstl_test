@@ -10,7 +10,7 @@ import clsx from 'clsx'
 export const Header = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
-	const isMobile = useMediaQuery('(max-width: 768px)')
+	const isMobile = useMediaQuery('(max-width: 992px)')
 
 	const sentinelRef = useRef<HTMLDivElement>(null)
 	const [isScrolled, setIsScrolled] = useState(false)

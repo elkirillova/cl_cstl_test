@@ -37,14 +37,41 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+	min-width: 375px;
 	background-color: $color-bg;
 	color: $color-main;
 	font-size: 16px;
 }
 
+h1 {
+	font-size: $fs-3xl;
+	line-height: $lh-tightest;
+	font-weight: 500;
+
+	@media only screen and (min-width: 768px) {
+		font-size: $fs-4xl;
+	}
+
+	@media only screen and (min-width: 1280px) {
+		font-size: $fs-5xl;
+	}
+
+	@media only screen and (min-width: 1440px) {
+		font-size: $fs-6xl;
+	}
+}
+
+p {
+	font-size: $fs-sm;
+	@media only screen and (min-width: 1280px) {
+		font-size: $fs-base;
+	}
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1440px;
+	width: 100%;
 	padding: 0 16px;
 
 	@media only screen and (min-width: 768px) {

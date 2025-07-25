@@ -1,12 +1,17 @@
 $header-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-//$header-height: 67px;
 
 :root {
-	--header-height: 67px;
+	--header-height: 61px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	:root {
-		--header-height: 61px;
+		--header-height: 48px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--header-height: 67px;
 	}
 }
