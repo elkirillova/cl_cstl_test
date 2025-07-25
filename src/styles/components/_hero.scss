@@ -1,0 +1,56 @@
+.hero {
+	&__wrapper {
+		display: grid;
+		grid-template-rows: 306px auto auto;
+		row-gap: 20px;
+
+		background-image: url('/hero.svg');
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: 343px auto;
+
+		@media only screen and (min-width: 768px) {
+			grid-template: 56px auto auto / 62% auto;
+			background-position: top right;
+			background-size: 42% auto;
+		}
+
+		@media only screen and (min-width: 992px) {
+			grid-template: 56px auto auto 50px/ 58% auto;
+		}
+
+		@media only screen and (min-width: 1280px) {
+			grid-template: 87px auto auto 50px / 590px auto;
+			column-gap: 20px;
+			background-size: contain;
+		}
+
+		@media only screen and (min-width: 1440px) {
+			grid-template: 87px auto auto 80px / 605px auto;
+			column-gap: 30px;
+			background-size: 694px auto;
+		}
+	}
+
+	&__title {
+		grid-row: 2 / 3;
+		max-width: 440px;
+
+		@media only screen and (min-width: 1280px) {
+			max-width: none;
+		}
+	}
+
+	&__about {
+		grid-row: 3 / 4;
+		padding-top: 10px;
+
+		@media only screen and (min-width: 1280px) {
+			max-width: 88%;
+		}
+
+		p + p {
+			margin-top: 15px;
+		}
+	}
+}
