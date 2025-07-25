@@ -61,6 +61,24 @@ h1 {
 	}
 }
 
+h2 {
+	font-size: $fs-xl;
+	line-height: $lh-tightest;
+	font-weight: 500;
+
+	@media only screen and (min-width: 768px) {
+		font-size: $fs-3xl;
+	}
+
+	@media only screen and (min-width: 1280px) {
+		font-size: $fs-4xl;
+	}
+
+	@media only screen and (min-width: 1440px) {
+		font-size: $fs-5xl;
+	}
+}
+
 p {
 	font-size: $fs-sm;
 	@media only screen and (min-width: 1280px) {
@@ -94,5 +112,14 @@ p {
 
 	@media only screen and (min-width: 1280px) {
 		margin-bottom: 145px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		text-align: center;
+
+		@media only screen and (min-width: 1280px) {
+			margin-bottom: 40px;
+		}
 	}
 }

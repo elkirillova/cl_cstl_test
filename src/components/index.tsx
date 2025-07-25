@@ -9,3 +9,4 @@ export { Portal } from './ui/Portal/Portal'
 
 // секции
 export { Hero } from './sections/Hero/Hero'
+export { Description } from './sections/Description/Description'
