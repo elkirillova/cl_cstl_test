@@ -10,7 +10,7 @@ const linksData = [
 	{ id: 1, url: 'desc', title: 'Что ждет' },
 	{ id: 2, url: 'section2', title: 'Маршрут' },
 	{ id: 3, url: 'section3', title: 'Бинго' },
-	{ id: 4, url: 'section4', title: 'FAQs' },
+	{ id: 4, url: 'faqs', title: 'FAQs' },
 ]
 
 export const Menu = ({ id, className, onLinkClick }: Props) => {

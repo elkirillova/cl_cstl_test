@@ -6,7 +6,9 @@ export { Footer } from './Footer/Footer'
 export { Icon } from './ui/Icon/Icon'
 export { Overlay } from './ui/Overlay/Overlay'
 export { Portal } from './ui/Portal/Portal'
+export { Accordion } from './ui/Accordion/Accordion'
 
 // секции
 export { Hero } from './sections/Hero/Hero'
 export { Description } from './sections/Description/Description'
+export { FAQs } from './sections/FAQs/FAQs'
