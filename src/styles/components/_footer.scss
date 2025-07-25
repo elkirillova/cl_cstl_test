@@ -1,3 +1,25 @@
+@use '../colors' as *;
+
 .footer {
-	background-color: pink;
+	&__wrapper {
+		padding-bottom: 23px;
+		text-align: center;
+		color: $color-accent;
+
+		@media only screen and (min-width: 768px) {
+			padding-bottom: 50px;
+		}
+
+		@media only screen and (min-width: 1280px) {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__link {
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
