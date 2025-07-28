@@ -1,5 +1,6 @@
-import { Description, FAQs, Hero } from '@/components'
+import { Bingo, Description, FAQs, Hero } from '@/components'
 import { faqsList } from '@/store/data'
+import { flipCardsList } from '@/store/data'
 
 export default function Home() {
 	return (
@@ -9,9 +10,7 @@ export default function Home() {
 			<section id="section2" className="section">
 				<div className="container">Маршрут</div>
 			</section>
-			<section id="section3" className="section">
-				<div className="container">Бинго</div>
-			</section>
+			<Bingo items={flipCardsList} />
 			<FAQs items={faqsList} />
 		</>
 	)
