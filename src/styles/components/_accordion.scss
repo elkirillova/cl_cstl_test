@@ -5,6 +5,11 @@
 	&__item {
 		padding-bottom: 15.5px;
 		border-bottom: 1px solid $color-gray;
+		transition: border-color .3s ease;
+
+		&:hover {
+			border-color: $color-accent;
+		}
 
 		@media only screen and (min-width: 1440px) {
 			padding-bottom: 13.5px;
@@ -38,14 +43,14 @@
 
 		cursor: pointer;
 
+		@media only screen and (min-width: 1280px) {
+			font-size: $fs-lg;
+		}
+
 		&.open {
 			align-items: flex-start;
 		}
 
-		@media only screen and (min-width: 1280px) {
-			font-size: $fs-lg;
-		}
-		
 		svg {
 			color: $color-accent;
 		}
