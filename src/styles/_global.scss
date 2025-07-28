@@ -2,8 +2,12 @@
 @use './vars' as *;
 @use './typography' as *;
 
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
 ::-webkit-scrollbar {
-	width: 4px;
+	width: 6px;
 	background: transparent;
 }
 
@@ -82,7 +86,7 @@ h2 {
 p {
 	font-size: $fs-sm;
 	line-height: $lh-snug;
-	
+
 	@media only screen and (min-width: 1280px) {
 		font-size: $fs-base;
 	}
@@ -95,7 +99,7 @@ p {
 	padding: 0 16px;
 
 	@media only screen and (min-width: 768px) {
-		padding: 0 32px;
+		padding: 0 31px;
 	}
 }
 
