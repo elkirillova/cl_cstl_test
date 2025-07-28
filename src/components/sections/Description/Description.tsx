@@ -9,7 +9,7 @@ export const Description = () => {
 						<h2>Что ждёт за платинкой</h2>
 					</div>
 					<div className="desc__img">
-						<Image src="/desc-img.jpg" alt="Лесной пейзаж" fill sizes="100vw" />
+						<Image src="/images/desc-img.jpg" alt="Лесной пейзаж" fill sizes="100vw" />
 					</div>
 					<p className="desc__text">Межгалактические порты и бесконечные просторы вселенной</p>
 				</div>
