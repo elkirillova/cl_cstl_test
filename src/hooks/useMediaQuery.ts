@@ -18,7 +18,5 @@ export const useMediaQuery = (query: string): boolean => {
 		}
 	}, [query])
 
-	console.log(matches)
-
 	return matches
 }

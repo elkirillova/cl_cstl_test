@@ -22,12 +22,9 @@ export const Accordion = ({ items }: { items: FaqsType[] }) => {
 	return (
 		<ul className="accordion">
 			{items.map(item => (
-				<AccordionItem
-					key={item.id}
-					data={item}
-					onClick={handleClick}
-					isOpen={item.id === openId}
-				/>
+				<li key={item.id} className="accordion__item">
+					<AccordionItem data={item} onClick={handleClick} isOpen={item.id === openId} />
+				</li>
 			))}
 		</ul>
 	)

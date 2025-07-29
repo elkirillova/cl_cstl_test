@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-
+import { ReactNode } from 'react'
 import '@/styles/index.scss'
 import { Header, Footer } from '@/components'
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode
+	children: ReactNode
 }>) {
 	return (
 		<html lang="ru">

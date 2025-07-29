@@ -22,7 +22,7 @@ export const AccordionItem = ({ data, onClick, isOpen }: Props) => {
 	}, [isOpen])
 
 	return (
-		<li key={data.id} className="accordion__item">
+		<>
 			<button
 				className={clsx('accordion__header', isOpen && 'open')}
 				onClick={() => onClick(data.id)}
@@ -49,6 +49,6 @@ export const AccordionItem = ({ data, onClick, isOpen }: Props) => {
 					<p>{data.answer}</p>
 				</div>
 			</div>
-		</li>
+		</>
 	)
 }
