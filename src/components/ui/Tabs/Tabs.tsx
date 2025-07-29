@@ -24,23 +24,34 @@ export const Tabs = ({ data }: { data: TabsData[] }) => {
 
 	return (
 		<div className="tabs">
-			<ul className="tabs__nav">
+			<ul className="tabs__nav" role="tablist" aria-label="Навигация по вкладкам">
 				{data.map(item => (
 					<li
 						key={item.id}
 						className={clsx('tabs__nav-item', {
 							'tabs__nav-item--active': activeTabId === item.id,
 						})}
+						role="presentation"
 					>
 						<TabsButton
 							item={item.button}
 							onClick={() => handleClick(item.id)}
 							isActive={activeTabId === item.id}
+							role="tab"
+							aria-selected={activeTabId === item.id}
+							aria-controls={`tabpanel-${item.id}`}
 						/>
 					</li>
 				))}
 			</ul>
-			<div className="tabs__content">{activeTab && <Cards items={activeTab.items} />}</div>
+			<div
+				className="tabs__content"
+				role="tabpanel"
+				id={`tabpanel-${activeTabId}`}
+				aria-labelledby={`tab-${activeTabId}`}
+			>
+				{activeTab && <Cards items={activeTab.items} />}
+			</div>
 		</div>
 	)
 }

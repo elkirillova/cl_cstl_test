@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './vars' as *;
 @use './typography' as *;
+@use './mixins/focus-ring' as *;
 
 * {
 	-webkit-tap-highlight-color: transparent;
@@ -23,6 +24,20 @@
 
 ::-webkit-scrollbar-thumb:hover {
 	background: $color-dark-gray;
+}
+
+/* focus */
+button,
+a,
+input,
+[tabindex] {
+	&:focus-visible {
+		@include focus-ring();
+		//transform: translateY(-1px);
+	}
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
 }
 
 small {

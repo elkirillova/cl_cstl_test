@@ -65,6 +65,10 @@
 			border-color: $color-gray;
 		}
 
+		&:focus-visible {
+			outline-color: $color-light-gray;
+		}
+
 		&--active {
 			border-color: $color-accent;
 		}

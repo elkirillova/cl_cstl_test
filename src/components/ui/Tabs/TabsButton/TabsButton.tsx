@@ -5,9 +5,12 @@ type Props = {
 	item: TabButton
 	onClick: () => void
 	isActive: boolean
+	role?: 'tab';
+	'aria-controls'?: string
+	'aria-selected': boolean
 }
 
-export const TabsButton = ({ item, onClick, isActive }: Props) => {
+export const TabsButton = ({ item, isActive, ...rest }: Props) => {
 	const { title, bgImage } = item
 	return (
 		<button
@@ -19,7 +22,7 @@ export const TabsButton = ({ item, onClick, isActive }: Props) => {
 						}
 					: undefined
 			}
-			onClick={onClick}
+			{...rest}
 		>
 			<p className="tabs__button-title">{title}</p>
 		</button>

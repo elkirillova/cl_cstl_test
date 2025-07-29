@@ -36,6 +36,10 @@
 		}
 	}
 
+	&:focus-visible {
+		outline-color: $color-light-gray;
+	}
+
 	&__content {
 		transition: transform .8s;
 		transform-style: preserve-3d;

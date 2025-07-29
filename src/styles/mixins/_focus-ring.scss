@@ -1,0 +1,7 @@
+@use '../colors' as *;
+
+@mixin focus-ring {
+	outline: 2px solid $color-accent;
+	outline-offset: 10px;
+	border-radius: 3px;
+}
