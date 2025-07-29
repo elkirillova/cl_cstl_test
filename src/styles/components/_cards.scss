@@ -1,0 +1,59 @@
+@use '../colors' as *;
+@use '../typography' as *;
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+
+	&__item {
+		width: 100%;
+		max-width: 343px;
+		min-height: 160px;
+
+		@media only screen and (min-width: 1440px) {
+			max-width: 445px;
+			min-height: 163px;
+		}
+	}
+}
+
+.card {
+	height: 100%;
+	background-color: $color-main;
+	border-radius: 16px;
+	color: $color-dark;
+
+	&__content {
+		padding: 40px 24px;
+
+		@media only screen and (min-width: 1440px) {
+			padding-inline: 32px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 13.5px;
+		font-size: $fs-base;
+		line-height: $lh-normal;
+
+		@media only screen and (min-width: 768px) {
+			margin-bottom: 13px;
+		}
+
+		@media only screen and (min-width: 1440px) {
+			margin-bottom: 7px;
+			font-size: $fs-lg;
+		}
+	}
+
+	&__subtitle {
+		font-size: $fs-sm;
+		line-height: $lh-comfy;
+
+		@media only screen and (min-width: 1280px) {
+			font-size: $fs-base;
+		}
+	}
+}
