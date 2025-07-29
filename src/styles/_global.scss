@@ -127,5 +127,31 @@ p {
 		@media only screen and (min-width: 1280px) {
 			margin-bottom: 40px;
 		}
+
+		h2 {
+			max-width: 520px;
+			margin: 0 auto;
+		}
+
+		h2:has(+ p) {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: $fs-md;
+			line-height: $lh-comfy;
+			font-weight: 500;
+
+			@media only screen and (min-width: 768px) {
+				max-width: 650px;
+				margin-inline: auto;
+			}
+
+			@media only screen and (min-width: 1280px) {
+				max-width: 80%;
+				font-size: $fs-2xl;
+				line-height: $lh-tight;
+			}
+		}
 	}
 }
