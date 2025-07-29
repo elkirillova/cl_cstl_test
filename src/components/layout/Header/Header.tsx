@@ -6,6 +6,7 @@ import { Menu } from './Menu/Menu'
 import { Overlay, Portal } from '@/components'
 import { useMediaQuery } from '@/hooks'
 import clsx from 'clsx'
+import { usePathname } from 'next/navigation'
 
 export const Header = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
@@ -14,6 +15,9 @@ export const Header = () => {
 
 	const sentinelRef = useRef<HTMLDivElement>(null)
 	const [isScrolled, setIsScrolled] = useState(false)
+
+	const pathname = usePathname()
+	const isHomePage = pathname === '/'
 
 	const menuId = 'menu'
 
@@ -44,6 +48,19 @@ export const Header = () => {
 
 		return () => observer.unobserve(sentinel)
 	}, [])
+
+	if (!isHomePage)
+		return (
+			<>
+				<header className="header">
+					<div className="container">
+						<div className="header__wrapper">
+							<Logo />
+						</div>
+					</div>
+				</header>
+			</>
+		)
 
 	return (
 		<>
