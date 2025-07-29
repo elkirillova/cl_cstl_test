@@ -16,7 +16,7 @@ export const Icon = ({ iconId, height, viewBox, width, className }: IconProps) =
 			xmlns={'http://www.w3.org/2000/svg'}
 			className={className}
 		>
-			<use href={`/icons/icons-sprite.svg#${iconId}`} />
+			<use href={`/icons/icons-sprite.svg?v1#${iconId}`} />
 		</svg>
 	)
 }
