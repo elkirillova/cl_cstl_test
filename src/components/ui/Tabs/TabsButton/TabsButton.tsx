@@ -18,7 +18,7 @@ export const TabsButton = ({ item, isActive, ...rest }: Props) => {
 			style={
 				bgImage
 					? {
-							backgroundImage: `url("/images/tabs/${bgImage}.svg")`,
+							backgroundImage: `url("/images/tabs/${bgImage}.png")`,
 						}
 					: undefined
 			}
