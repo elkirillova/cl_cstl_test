@@ -1,6 +1,6 @@
-import { faqsType } from '../types'
+import { FaqsType } from '../types'
 
-export const faqsList: faqsType[] = [
+export const faqsList: FaqsType[] = [
 	{
 		id: 0,
 		question: 'Что такое современный поиск?',

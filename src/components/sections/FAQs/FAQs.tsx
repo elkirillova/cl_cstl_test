@@ -1,7 +1,7 @@
 import { Accordion } from '@/components'
-import { faqsType } from '@/store/types'
+import { FaqsType } from '@/store/types'
 
-export const FAQs = ({ items }: { items: faqsType[] }) => {
+export const FAQs = ({ items }: { items: FaqsType[] }) => {
 	return (
 		<section className="section faqs" id="faqs">
 			<div className="container">

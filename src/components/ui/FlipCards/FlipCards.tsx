@@ -1,7 +1,7 @@
-import { flipCardType } from '@/store/types'
+import { FlipCardType } from '@/store/types'
 import { FlipCard } from './FlipCard/FlipCard'
 
-export const FlipCards = ({ items }: { items: flipCardType[] }) => {
+export const FlipCards = ({ items }: { items: FlipCardType[] }) => {
 	if (!items.length) return <p>Карточек нет</p>
 
 	return (

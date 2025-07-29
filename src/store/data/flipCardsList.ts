@@ -1,6 +1,6 @@
-import { flipCardType } from '../types'
+import { FlipCardType } from '../types'
 
-export const flipCardsList: flipCardType[] = [
+export const flipCardsList: FlipCardType[] = [
 	{
 		id: 0,
 		title: 'Физика',

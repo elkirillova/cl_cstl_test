@@ -1,8 +1,8 @@
 'use client'
-import { flipCardType } from '@/store/types'
+import { FlipCardType } from '@/store/types'
 
 type Props = {
-	data: flipCardType
+	data: FlipCardType
 }
 
 export const FlipCard = ({ data }: Props) => {

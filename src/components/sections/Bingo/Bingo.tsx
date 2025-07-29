@@ -1,12 +1,12 @@
 import { FlipCards } from "@/components"
-import { flipCardType } from "@/store/types"
+import { FlipCardType } from "@/store/types"
 
-export const Bingo = ({ items }: { items: flipCardType[] }) => {
+export const Bingo = ({ items }: { items: FlipCardType[] }) => {
 	return (
-		<section className="section bingo" id="bingo">
+		<section className="section" id="bingo">
 			<div className="container">
-				<div className="bingo__wrapper">
-					<div className="section__title bingo__title">
+				<div className="section__wrapper">
+					<div className="section__title">
 						<h2>Открой все карточки и собери свое бинго</h2>
 					</div>
 					<FlipCards items={items} />

@@ -1,10 +1,10 @@
 import { Icon } from '@/components'
-import { faqsType } from '@/store/types'
+import { FaqsType } from '@/store/types'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 
 type Props = {
-	data: faqsType
+	data: FaqsType
 	onClick: (id: number) => void
 	isOpen: boolean
 }

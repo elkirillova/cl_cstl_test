@@ -1,10 +1,10 @@
 'use client'
 
-import { faqsType } from '@/store/types'
+import { FaqsType } from '@/store/types'
 import { useEffect, useState } from 'react'
 import { AccordionItem } from './AccordionItem.tsx/AccordionItem'
 
-export const Accordion = ({ items }: { items: faqsType[] }) => {
+export const Accordion = ({ items }: { items: FaqsType[] }) => {
 	const [openId, setOpenId] = useState<number | null>(null)
 
 	const handleClick = (id: number) => {
