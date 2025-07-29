@@ -1,15 +1,14 @@
 import { Route, Bingo, Description, FAQs, Hero } from '@/components'
-import { faqsList, tabsData } from '@/store/data'
-import { flipCardsList } from '@/store/data'
+import { faqsList, heroContent, descriptionContent, tabsData, bingoContent, routeContent, faqsContent, flipCardsList } from '@/store/data'
 
 export default function Home() {
 	return (
 		<>
-			<Hero />
-			<Description />
-			<Route items={tabsData} />
-			<Bingo items={flipCardsList} />
-			<FAQs items={faqsList} />
+			<Hero {...heroContent} />
+			<Description {...descriptionContent} />
+			<Route items={tabsData} {...routeContent} />
+			<Bingo items={flipCardsList} {...bingoContent} />
+			<FAQs items={faqsList} {...faqsContent} />
 		</>
 	)
 }

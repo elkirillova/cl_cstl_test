@@ -1,17 +1,18 @@
 import { Tabs } from '@/components'
-import { TabsData } from '@/store/types'
+import { SectionContent, TabsData } from '@/store/types'
 
-export const Route = ({ items }: { items: TabsData[] }) => {
+type Props = {
+	items: TabsData[]
+} & SectionContent
+
+export const Route = ({ items, heading, description }: Props) => {
 	return (
 		<section className="section route" id="route">
 			<div className="container">
 				<div className="route__wrapper">
 					<div className="section__title route__title">
-						<h2>В первый день вас ждет интересный маршрут</h2>
-						<p>
-							Международный аэропорт Екатеринбурга обслуживает как сам Екатеринбург, так прилежащие
-							к нему районы Свердловской области.
-						</p>
+						<h2>{heading}</h2>
+						{description}
 					</div>
 					<Tabs data={items} />
 				</div>

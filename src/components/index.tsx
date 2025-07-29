@@ -1,6 +1,6 @@
 // layout
-export { Header } from './Header/Header'
-export { Footer } from './Footer/Footer'
+export { Header } from './layout/Header/Header'
+export { Footer } from './layout/Footer/Footer'
 
 // переиспользуемые компоненты
 export { Icon } from './ui/Icon/Icon'

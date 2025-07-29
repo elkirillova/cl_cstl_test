@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type FaqsType = {
 	id: number
 	question: string
@@ -28,4 +30,9 @@ export type TabsData = {
 	id: TabId
 	button: TabButton
 	items: CardType[]
+}
+
+export type SectionContent = {
+	heading: string
+	description?: ReactNode
 }

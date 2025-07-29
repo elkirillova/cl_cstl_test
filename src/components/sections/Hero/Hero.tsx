@@ -1,21 +1,15 @@
-export const Hero = () => {
+import { SectionContent } from "@/store/types"
+
+export const Hero = ({heading, description}: SectionContent) => {
 	return (
 		<section className="section hero">
 			<div className="container">
 				<div className="hero__wrapper">
 					<div className="hero__title">
-						<h1>Плотинка лесная отборная со вкусом подземного ручейка</h1>
+						<h1>{heading}</h1>
 					</div>
 					<div className="hero__about">
-						<p>
-							Заводская плотина в Екатеринбурге была построена в 1723 году из уральской лиственницы,
-							которая не гниет в воде, а со временем лишь каменеет и становится крепче. В создании
-							плотинки принял деятельное участие российский военный инженер В. И. де Геннин.
-						</p>
-						<p>
-							С этого места началось всё строительство города. Одновременно стали возводить
-							крепость, защищающую будущий завод от набегов башкир, на чьих землях он и строился.
-						</p>
+						{description}
 					</div>
 				</div>
 			</div>
