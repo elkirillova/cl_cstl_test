@@ -9,6 +9,7 @@ import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
 export const Header = () => {
+	const [hasMounted, setHasMounted] = useState(false)
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
 	const isMobile = useMediaQuery('(max-width: 992px)')
@@ -24,6 +25,10 @@ export const Header = () => {
 	const handleMenuClose = () => {
 		setIsMobileMenuOpen(false)
 	}
+
+	useEffect(() => {
+		setHasMounted(true)
+	}, [])
 
 	useEffect(() => {
 		if (isMobile) {
@@ -49,6 +54,10 @@ export const Header = () => {
 		return () => observer.unobserve(sentinel)
 	}, [])
 
+	if (!hasMounted) {
+		return null 
+	}
+
 	if (!isHomePage)
 		return (
 			<>
@@ -70,8 +79,8 @@ export const Header = () => {
 					<div className="header__wrapper">
 						<Logo />
 
-						{!isMobile && <Menu className={'header__nav'} />}
-						{isMobile && (
+						{hasMounted && !isMobile && <Menu className={'header__nav'} />}
+						{hasMounted && isMobile && (
 							<BurgerButton
 								onClick={() => setIsMobileMenuOpen(true)}
 								ariaControls={menuId}
@@ -81,7 +90,7 @@ export const Header = () => {
 					</div>
 				</div>
 			</header>
-			{isMobile && isMobileMenuOpen && (
+			{hasMounted && isMobile && isMobileMenuOpen && (
 				<Portal>
 					<>
 						<Menu
