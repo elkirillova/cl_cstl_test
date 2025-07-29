@@ -15,4 +15,14 @@
 	<symbol id='accordionArray' viewBox="0 0 22 14" fill="none">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.37446L2.98752 0.384277L11 8.4039L19.0125 0.384277L22 3.37446L11 14.3843L0 3.37446Z" fill="currentColor"/>
 	</symbol>
+
+	<symbol id='openMenu' viewBox="0 0 32 22" fill="none">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M1.31134e-07 -2.79753e-06L32 0L32 1.5L0 1.5L1.31134e-07 -2.79753e-06Z" fill="currentColor"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M1.31134e-07 10L32 10L32 11.5L0 11.5L1.31134e-07 10Z" fill="currentColor"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M1.31134e-07 20L32 20L32 21.5L0 21.5L1.31134e-07 20Z" fill="currentColor"/>
+	</symbol>
+
+	<symbol id="close" viewBox="0 0 24 24">
+		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21l-9-9m0 0L3 3m9 9l9-9m-9 9l-9 9" />
+	</symbol>
 </svg>

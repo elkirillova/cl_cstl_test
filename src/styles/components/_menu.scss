@@ -2,22 +2,34 @@
 @use '../colors' as *;
 
 .menu {
-	padding: 70px 30px;
+	padding: 19px 16px 70px 30px;
 	position: fixed;
 	top: 0;
 	right: 0;
+
 	width: 84%;
-	height: 100vh;
+	height: 100%;
+
+	display: grid;
+	grid-template-rows: min-content auto;
+	row-gap: 22px;
+
 	background-color: $color-bg;
 	z-index: 100;
 	opacity: 0;
+	will-change: opacity;
 	transition: opacity 0.3s ease;
 
 	@media only screen and (min-width: 768px) {
+		padding-right: 31px;
+	}
+
+	@media only screen and (min-width: 992px) {
 		padding: 0;
 		position: static;
 		width: auto;
 		height: auto;
+		display: block;
 		background-color: transparent;
 		opacity: 1;
 	}
@@ -26,13 +38,17 @@
 		opacity: 1;
 	}
 
+	&__nav {
+		grid-row: 2/3;
+	}
+
 	&__list {
 		display: flex;
 		flex-direction: column;
 		column-gap: 64px;
 		row-gap: 16px;
 
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: 992px) {
 			flex-direction: row;
 		}
 	}
@@ -51,5 +67,11 @@
 				color: $color-accent;
 			}
 		}
+	}
+
+	&__close {
+		grid-row: 1/2;
+		justify-self: flex-end;
+		color: $color-gray; 
 	}
 }

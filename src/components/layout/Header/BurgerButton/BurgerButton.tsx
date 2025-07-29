@@ -1,26 +1,23 @@
+import { Icon } from '@/components'
 import { memo } from 'react'
 
 type Props = {
-	isOpen: boolean
 	onClick: () => void
-	ariaCcontrols?: string
+	ariaControls?: string
 	ariaExpanded?: boolean
-	ariaLabel?: string
 }
 
 export const BurgerButton = memo(
-	({ isOpen, onClick, ariaCcontrols, ariaExpanded, ariaLabel }: Props) => {
+	({ onClick, ariaControls, ariaExpanded}: Props) => {
 		return (
 			<button
 				onClick={onClick}
-				className={isOpen ? 'burger burger--open' : 'burger'}
-				aria-controls={ariaCcontrols}
+				className="burger"
+				aria-controls={ariaControls}
 				aria-expanded={ariaExpanded}
-				aria-label={ariaLabel}
+				aria-label="Открыть меню"
 			>
-				<span />
-				<span />
-				<span />
+				<Icon iconId={'openMenu'} width={'32px'} height={'22px'} viewBox={'0 0 32 22'} />
 			</button>
 		)
 	}

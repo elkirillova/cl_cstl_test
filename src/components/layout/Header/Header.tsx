@@ -17,10 +17,6 @@ export const Header = () => {
 
 	const menuId = 'menu'
 
-	const handleMenuToggle = () => {
-		setIsMobileMenuOpen(prev => !prev)
-	}
-
 	const handleMenuClose = () => {
 		setIsMobileMenuOpen(false)
 	}
@@ -60,11 +56,9 @@ export const Header = () => {
 						{!isMobile && <Menu className={'header__nav'} />}
 						{isMobile && (
 							<BurgerButton
-								isOpen={isMobileMenuOpen}
-								onClick={handleMenuToggle}
-								ariaCcontrols={menuId}
+								onClick={() => setIsMobileMenuOpen(true)}
+								ariaControls={menuId}
 								ariaExpanded={isMobileMenuOpen}
-								ariaLabel={isMobileMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
 							/>
 						)}
 					</div>
@@ -75,10 +69,11 @@ export const Header = () => {
 					<>
 						<Menu
 							id={menuId}
+							isMobile={isMobile}
 							className={isMobileMenuOpen ? 'menu--show ' : ''}
-							onLinkClick={handleMenuClose}
+							onClick={handleMenuClose}
 						/>
-						<Overlay onClick={handleMenuToggle} />
+						<Overlay onClick={handleMenuClose} />
 					</>
 				</Portal>
 			)}
