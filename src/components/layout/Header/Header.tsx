@@ -96,6 +96,7 @@ export const Header = () => {
 						<Menu
 							id={menuId}
 							isMobile={isMobile}
+							isOpen={isMobileMenuOpen}
 							className={isMobileMenuOpen ? 'menu--show ' : ''}
 							onClick={handleMenuClose}
 						/>
