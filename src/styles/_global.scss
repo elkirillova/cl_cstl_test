@@ -41,6 +41,7 @@ input,
 }
 
 small {
+	vertical-align: top;
 	font-size: $fs-xxs;
 	line-height: $lh-relaxed;
 }
@@ -86,9 +87,9 @@ h2 {
 	line-height: $lh-tightest;
 	font-weight: 500;
 
-	@media only screen and (min-width: 768px) {
-		font-size: $fs-3xl;
-	}
+	// @media only screen and (min-width: 768px) {
+	// 	font-size: $fs-3xl;
+	// }
 
 	@media only screen and (min-width: 1280px) {
 		font-size: $fs-4xl;

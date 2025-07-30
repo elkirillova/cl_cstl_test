@@ -2,11 +2,7 @@
 @use '../typography' as *;
 
 .tabs {
-	margin-top: 20px;
-
-	@media only screen and (min-width: 1440px) {
-		margin-top: 40px;
-	}
+	margin-top: 40px;
 
 	&__nav {
 		--gap: 20px;

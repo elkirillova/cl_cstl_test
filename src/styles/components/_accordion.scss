@@ -48,7 +48,7 @@
 		}
 
 		&.open {
-			align-items: flex-start;
+			align-items: baseline;
 		}
 
 		svg {
@@ -67,7 +67,7 @@
 	}
 
 	&__body {
-		padding: 14px 0 9.5px;
+		padding: 14px 16px 9.5px 0;
 
 		@media only screen and (min-width: 768px) {
 			padding-bottom: 2px;

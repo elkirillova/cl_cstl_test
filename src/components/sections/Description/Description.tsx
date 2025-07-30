@@ -6,7 +6,7 @@ export const Description = ({heading, description}: SectionContent) => {
 		<section className="section desc" id="desc">
 			<div className="container">
 				<div className="desc__wrapper">
-					<div className="section__title">
+					<div className="section__title desc__title">
 						<h2>{heading}</h2>
 					</div>
 					<div className="desc__img">
